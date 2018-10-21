@@ -1,2 +1,2 @@
 # Sneppi
-A small single button game
+A cute small single button game.
