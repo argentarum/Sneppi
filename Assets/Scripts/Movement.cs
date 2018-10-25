@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
+	public float RotationSpeed = 1.0f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -36,6 +38,14 @@ public class Movement : MonoBehaviour {
 		if (Input.GetKey(KeyCode.S))
 		{
 			movement += Vector3.down;
+		}
+		if (Input.GetKey(KeyCode.A))	
+		{
+			transform.Rotate(0, RotationSpeed * Time.deltaTime, 0);
+		}
+		if (Input.GetKey(KeyCode.D))	
+		{
+			transform.Rotate(0, -RotationSpeed * Time.deltaTime, 0);
 		}
 		transform.position += movement * Time.deltaTime;
 	}
